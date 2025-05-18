@@ -1,42 +1,26 @@
 #!/bin/bash
 
 #SBATCH --job-name=ffcv        # Job name
-#SBATCH --output=/hpc/group/wengerlab/zl310/data_overlap/train_tinyimagenet_ffcv/log_dir/slurm_out/%j.out            # Output file name (%j expands to jobID)
-#SBATCH --error=/hpc/group/wengerlab/zl310/data_overlap/train_tinyimagenet_ffcv/log_dir/slurm_out/%j.err             # Error file name (%j expands to jobID)
-#SBATCH --partition=wengerlab-gpu           # Partition name
+#SBATCH --output=/path/to/ReprSimCauses/train_tinyimagenet_ffcv/log_dir/slurm_out/%j.out            # Output file name (%j expands to jobID)
+#SBATCH --error=/path/to/ReprSimCauses/train_tinyimagenet_ffcv/log_dir/slurm_out/%j.err             # Error file name (%j expands to jobID)
+#SBATCH --partition=your_account-gpu           # Partition name
 #SBATCH --time=16:00:00            # Maximum runtime (HH:MM:SS)
 #SBATCH --nodes=1                  # Number of nodes
 #SBATCH --ntasks-per-node=1        # Number of tasks per node
 #SBATCH --cpus-per-task=10          # Number of CPU cores per task
 #SBATCH --mem=26G                   # Memory required per node
 #SBATCH --gres=gpu:1
-#SBATCH --account=wengerlab
-
-
-# #!/bin/bash
-# a 
-# #SBATCH --job-name=ffcv        # Job name
-# #SBATCH --output=/hpc/group/wengerlab/zl310/data_overlap/train_tinyimagenet_ffcv/log_dir/slurm_out/%j.out            # Output file name (%j expands to jobID)
-# #SBATCH --error=/hpc/group/wengerlab/zl310/data_overlap/train_tinyimagenet_ffcv/log_dir/slurm_out/%j.err             # Error file name (%j expands to jobID)
-# #SBATCH --partition=h200ea           # Partition name
-# #SBATCH --time=16:00:00            # Maximum runtime (HH:MM:SS)
-# #SBATCH --nodes=1                  # Number of nodes
-# #SBATCH --ntasks-per-node=1        # Number of tasks per node
-# #SBATCH --cpus-per-task=10          # Number of CPU cores per task
-# #SBATCH --mem=26G                   # Memory required per node
-# #SBATCH --gres=gpu:h200_1g.18gb:1
-# #SBATCH --account=h200ea
-
+#SBATCH --account=your_account
 
 
 # Load any required modules here
 
 # info: run like SEED=int sbatch run_train.sh
-mkdir -p /hpc/group/wengerlab/zl310/data_overlap/train_tinyimagenet_ffcv/log_dir/slurm_out
+mkdir -p /path/to/ReprSimCauses/train_tinyimagenet_ffcv/log_dir/slurm_out
 
 source ~/.bashrc  # Ensure bash profile is loaded (only needed if using bash)
 eval "$(conda shell.bash hook)"  # Initialize Conda
-conda activate ffcv2; cd /hpc/group/wengerlab/zl310/data_overlap/train_tinyimagenet_ffcv
+conda activate ffcv2; cd /path/to/ReprSimCauses/train_tinyimagenet_ffcv
 
 # ds_overlap
 python ffcv_tinyimagenet_train_ds_overlap.py --data.class_frac_overlap 0 --training.seed $SEED --output.output_root ./log_dir/ds_overlap_tinyimagenet

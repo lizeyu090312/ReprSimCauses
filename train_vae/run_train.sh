@@ -1,8 +1,8 @@
 #!/bin/sh
 
 #SBATCH --job-name=ffcv        # Job name
-#SBATCH --output=/hpc/group/wengerlab/zl310/data_overlap/train_vae/log_dir/slurm_out/%j.out            # Output file name (%j expands to jobID)
-#SBATCH --error=/hpc/group/wengerlab/zl310/data_overlap/train_vae/log_dir/slurm_out/%j.err             # Error file name (%j expands to jobID)
+#SBATCH --output=/path/to/ReprSimCauses/train_vae/log_dir/slurm_out/%j.out            # Output file name (%j expands to jobID)
+#SBATCH --error=/path/to/ReprSimCauses/train_vae/log_dir/slurm_out/%j.err             # Error file name (%j expands to jobID)
 #SBATCH --partition=gpu-common           # Partition name
 #SBATCH --time=16:00:00            # Maximum runtime (HH:MM:SS)
 #SBATCH --nodes=1                  # Number of nodes
@@ -10,17 +10,17 @@
 #SBATCH --cpus-per-task=10          # Number of CPU cores per task
 #SBATCH --mem=26G                   # Memory required per node
 #SBATCH --gres=gpu:1
-#SBATCH --account=wengerlab
-#SBATCH --nodelist=dcc-core-gpu-09,dcc-core-gpu-10,dcc-core-gpu-11,dcc-core-gpu-26,dcc-core-gpu-27,dcc-core-gpu-28,dcc-core-gpu-29,dcc-core-gpu-30,dcc-core-gpu-31,dcc-core-gpu-32,dcc-core-gpu-33,dcc-core-gpu-34,dcc-core-gpu-35,dcc-core-gpu-36,dcc-core-gpu-37,dcc-core-gpu-38,dcc-core-gpu-39,dcc-core-gpu-40,dcc-core-gpu-41,dcc-core-gpu-42,dcc-core-gpu-43,dcc-core-gpu-44,dcc-core-gpu-45,dcc-core-gpu-46
+#SBATCH --account=your_account
+
 
 # Load any required modules here
 
 # info: run like SEED=int sbatch run_train.sh
-mkdir -p /hpc/group/wengerlab/zl310/data_overlap/train_vae/log_dir/slurm_out
+mkdir -p /path/to/ReprSimCauses/train_vae/log_dir/slurm_out
 
 source ~/.bashrc  # Ensure bash profile is loaded (only needed if using bash)
 eval "$(conda shell.bash hook)"  # Initialize Conda
-conda activate ffcv2; cd /hpc/group/wengerlab/zl310/data_overlap/train_vae
+conda activate ffcv2; cd /path/to/ReprSimCauses/train_vae
 
 
 # Horizontal
