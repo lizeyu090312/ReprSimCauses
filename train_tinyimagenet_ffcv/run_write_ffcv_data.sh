@@ -1,0 +1,5 @@
+python ffcv_tinyimagenet_write_data.py
+
+python ffcv_svhn_write_data.py
+
+python ffcv_mnist_write_data.py
