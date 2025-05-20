@@ -108,7 +108,7 @@ if __name__ == "__main__":
                 metric_ood_all_svhn = compute_metric(tl_svhn, device, args.metrics)
                 
                 f = open(path_to_cka_res, "a")
-                for metric in args.metrics:\
+                for metric in args.metrics:
                     # "seed,metric,frac_overlap,metric_overlap,metric_ood_all_mnist,metric_ood_all_svhn
                     f.write(f"{seed:d},{metric},{frac_overlap},{metric_overlap[metric]:.6f},{metric_ood_all_mnist[metric]:.6f},{metric_ood_all_svhn[metric]:.6f}\n")
                 f.close()

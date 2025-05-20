@@ -1,0 +1,4 @@
+,mutual_information,r_squared
+Tiny-Stories,0.0,0.04536638095277046
+Shakespeare (OOD),0.0,0.0004436933828120271
+wikitext (OOD),0.17245810026952269,0.02590932145047853

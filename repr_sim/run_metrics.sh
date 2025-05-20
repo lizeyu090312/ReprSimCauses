@@ -47,14 +47,3 @@ python vae_cifar10_task_overlap_run_metrics.py --log_base_dir ../train_vae/log_d
 
 python nanogpt_ds_run_metrics.py --log_base_dir ../train_nanoGPT/log_dir/nanogpt_ds_overlap
 python nanogpt_task_run_metrics.py --log_base_dir ../train_nanoGPT/log_dir/nanogpt_task_overlap
-
-
-# train_nanoGPT dataset overlap
-# python gpt2_ds_run_metrics.py --log_base_dir ../train_nanoGPT/log_dir/nanogpt_horizontal_babyGPT_shakespeare_all
-# python gpt2_ds_run_metrics.py --log_base_dir ../train_nanoGPT/log_dir/nanogpt_horizontal_babyGPT_tinystories
-
-# # train_nanoGPT task overlap
-# python gpt2_task_run_metrics.py --log_base_dir ../train_nanoGPT/log_dir/nanogpt_task_babyGPT
-
-# # partitioned datasets
-# python partition_run_metrics_ffcv.py --log_base_dir ../combined_dataset_ffcv/log_dir_partition
