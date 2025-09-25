@@ -1,4 +1,0 @@
-,mutual_information,r_squared
-metric_overlap,2.135741344023451,0.9764990869365173
-metric_ood_all_mnist,0.0,0.05833316859091764
-metric_ood_all_svhn,0.26620759747379585,0.33081303472265966

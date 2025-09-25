@@ -32,3 +32,4 @@ torchvision
 tqdm
 transformers
 triton
+peft

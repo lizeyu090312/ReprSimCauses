@@ -1,0 +1,2 @@
+,mutual_information,r_squared
+metric_cifar100,0.9225686274889575,0.9114545102539027

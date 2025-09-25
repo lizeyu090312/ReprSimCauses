@@ -1,0 +1,2 @@
+,mutual_information,r_squared
+metric_tinyimagenet,0.42942332983998255,0.23810553655652122

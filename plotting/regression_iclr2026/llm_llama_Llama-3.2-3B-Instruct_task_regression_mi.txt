@@ -1,0 +1,2 @@
+,mutual_information,r_squared
+OOD,0.21799242424242515,0.4728312893309473
