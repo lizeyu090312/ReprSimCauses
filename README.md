@@ -1,8 +1,8 @@
-# Official Implementation of *Exploring Causes of Representational Similarity in Machine Learning Models*
+# Official Implementation of *Causes and Consequences of Representational Similarity in Machine Learning Models*
 Under review.
 
 ### Introduction
-This repository contains the official implementation of *Exploring Causes of Representational Similarity in Machine Learning Models*. Please create two environments: one containing ffcv (refer to https://ffcv.io) and the other containing packages in `pip install -r requirements.txt`. 
+This repository contains the official implementation of *Causes and Consequences of Representational Similarity in Machine Learning Models*. Please create two environments: one containing ffcv (refer to https://ffcv.io) and the other containing packages in `pip install -r requirements.txt`. 
 
 ### Training ResNet-18, nanoGPT, and diffusion UNet
 The training scripts can be found under `train**/`. Please run `bash run_write_ffcv_data.sh` if this file is available and then `bash run_train_wrapper.sh` to train the models using task and dataset splitting. Remember to change the paths appropriately. For training the diffusion UNet, remember to change all occurrences of `/path/to/tiny_imagenet_200` and copy over `./log_dir/<dataset>/labels.pkl` files generated using `ReprSimCauses/vit_resnet_different_model_size/save_labels.py`. 
