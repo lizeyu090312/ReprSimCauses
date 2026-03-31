@@ -2,7 +2,7 @@
 Under review.
 
 ### Introduction
-This repository contains the official implementation of *Causes and Consequences of Representational Similarity in Machine Learning Models*. Please create two environments: one containing ffcv (refer to https://ffcv.io) and the other containing packages in `pip install -r requirements.txt`. 
+This repository contains the official implementation of *Causes and Consequences of Representational Similarity in Machine Learning Models*. Please create two environments: one containing ffcv (refer to https://ffcv.io) and the other containing packages in `pip install -r requirements.txt`. Alternatively, you can also follow our instructions at the bottom of this document to install the conda environments. 
 
 ### Training ResNet-18, nanoGPT, and diffusion UNet
 The training scripts can be found under `train**/`. Please run `bash run_write_ffcv_data.sh` if this file is available and then `bash run_train_wrapper.sh` to train the models using task and dataset splitting. Remember to change the paths appropriately. For training the diffusion UNet, remember to change all occurrences of `/path/to/tiny_imagenet_200` and copy over `./log_dir/<dataset>/labels.pkl` files generated using `ReprSimCauses/vit_resnet_different_model_size/save_labels.py`. 
@@ -25,3 +25,6 @@ To reproduce the box plots in the main paper as well as the mutual information t
 
 ### Notes about the TinyImageNet dataset
 Please download the dataset from `http://cs231n.stanford.edu/tiny-imagenet-200.zip`. Then, unzip using `unzip path/to/tiny-imagenet-200.zip`. Then, copy `ReprSimCauses/train_tinyimagenet_ffcv/tinyimagenet_dataset_reorg.py` to `path/to/tiny-imagenet-200` and run `cd path/to/tiny-imagenet-200; python tinyimagenet_dataset_reorg.py`. 
+
+### Environment setup
+Please find the conda environments exported in `ffcv2.yml` and `data_overlap.yml` (you should replace `/path/to/conda` in the two `.yml` files before installation). Please also refer to https://ffcv.io for FFCV installation guidelines. 
