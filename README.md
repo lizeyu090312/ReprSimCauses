@@ -1,5 +1,8 @@
 # Official Implementation of *Causes and Consequences of Representational Similarity in Machine Learning Models*
-Under review.
+
+Zeyu Michael Li*, Hung Anh Vu*, Damilola Awofisayo, Emily Wenger. Published at ICML 2026. 
+
+\*Equal contribution, ordered alphabetically by last name.
 
 ### Introduction
 This repository contains the official implementation of *Causes and Consequences of Representational Similarity in Machine Learning Models*. Please create two environments: one containing ffcv (refer to https://ffcv.io) and the other containing packages in `pip install -r requirements.txt`. Alternatively, you can also follow our instructions at the bottom of this document to install the conda environments. 
@@ -28,3 +31,23 @@ Please download the dataset from `http://cs231n.stanford.edu/tiny-imagenet-200.z
 
 ### Environment setup
 Please find the conda environments exported in `ffcv2.yml` and `data_overlap.yml` (you should replace `/path/to/conda` in the two `.yml` files before installation). Please also refer to https://ffcv.io for FFCV installation guidelines. 
+
+### Citation
+
+If you found the code useful in your research, please cite our paper!
+
+```bib
+@misc{li2025causesconsequencesrepresentationalsimilarity,
+      title={Causes and Consequences of Representational Similarity in Machine Learning Models}, 
+      author={Zeyu Michael Li and Hung Anh Vu and Damilola Awofisayo and Emily Wenger},
+      year={2025},
+      eprint={2505.13899},
+      archivePrefix={arXiv},
+      primaryClass={cs.LG},
+      url={https://arxiv.org/abs/2505.13899}, 
+}
+```
+
+### Acknowledgements
+
+We base our representational similarity code on https://github.com/minyoungg/platonic-rep. We thank the authors of [The Platonic Representation Hypothesis](https://arxiv.org/abs/2405.07987) for open-sourcing their code. 
